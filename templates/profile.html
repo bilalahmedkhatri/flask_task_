@@ -1,0 +1,88 @@
+{% include 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <div class="row">
+        <center class="mt-5 mb-5">
+            <h1>
+                <strong>
+                    My Profile
+                </strong>
+            </h1>
+        </center>
+        <div class="col-md-12 mt-4 mb-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">S. No's</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date of Birth</th>
+                        <th scope="col">edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for d in result %}
+                    <tr>
+                        <th scope="row"> {{ d._id }} </th>
+                        <td> {{ d.full_name }} </td>
+                        <td> {{ d.dob }} </td>
+                        <td> {{ d.password_hint}} </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- <center class="mt-5">
+            <h1>
+                <strong>
+                    View detail as a Tree
+                </strong>
+            </h1>
+        </center>
+        <div class="col-md-12">
+            <figure>
+                <figcaption>Example sitemap</figcaption>
+                <ul class="tree">
+                    <li><span>Home</span>
+                        <ul>
+                            <li><span>About us</span>
+                                <ul>
+                                    <li><span>Our history</span>
+                                        <ul>
+                                            <li><span>Founder</span></li>
+                                        </ul>
+                                    </li>
+                                    <li><span>Our board</span>
+                                        <ul>
+                                            <li><span>Brad Whiteman</span></li>
+                                            <li><span>Cynthia Tolken</span></li>
+                                            <li><span>Bobby Founderson</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><span>Our products</span>
+                                <ul>
+                                    <li><span>The Widget 2000™</span>
+                                        <ul>
+                                            <li><span>Order form</span></li>
+                                        </ul>
+                                    </li>
+                                    <li><span>The McGuffin V2</span>
+                                        <ul>
+                                            <li><span>Order form</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </figure>
+        </div> -->
+    </div>
+</div>
+{% endblock %}

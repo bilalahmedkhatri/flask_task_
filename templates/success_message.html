@@ -1,0 +1,20 @@
+{% include 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="dol-md-12">
+
+            <div class="m-5 position-relative">
+
+                Congratulation to Mr./Ms. <strong>{{ name }}</strong> your account is created successfully, Now you can
+                login to your
+                account.
+                <a href="{{ url_for('Login') }}"> Click here to Login </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

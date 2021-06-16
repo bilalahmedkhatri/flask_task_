@@ -1,0 +1,39 @@
+{% include 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <center class="mt-5 mb-5">
+            <h1>
+                <strong>
+                    Sign Up
+                </strong>
+            </h1>
+        </center>
+        <div class="col-md-12 mt-4 mb-4">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger alert-dismissible fade show col-md-5" role="alert">
+                {{ messages[0] }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endif %}
+            {% endwith %}
+            <form method="POST" action="" enctype="multipart/form-data">
+                <div class="mb-3 col-5">
+                    <input type="text" class="form-control" name="fname" placeholder="Full Name">
+                </div>
+                <div class="mb-3 col-5">
+                    <input type="date" class="form-control" name="date" placeholder="Date of Birth">
+                </div>
+                <div class="mb-3 col-5">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary ">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
